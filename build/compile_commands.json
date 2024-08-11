@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/build",
+  "command": "/usr/bin/c++ -g -std=gnu++11 -o CMakeFiles/cmake_planning_test1.dir/aaa.cpp.o -c /home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/aaa.cpp",
+  "file": "/home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/aaa.cpp"
+},
+{
+  "directory": "/home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/build",
+  "command": "/usr/bin/c++ -g -std=gnu++11 -o CMakeFiles/cmake_planning_test1.dir/bbb.cpp.o -c /home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/bbb.cpp",
+  "file": "/home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/bbb.cpp"
+}
+]
