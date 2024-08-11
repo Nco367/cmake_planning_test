@@ -1,12 +1,12 @@
 [
 {
   "directory": "/home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/build",
-  "command": "/usr/bin/c++ -g -std=gnu++11 -o CMakeFiles/cmake_planning_test1.dir/aaa.cpp.o -c /home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/aaa.cpp",
-  "file": "/home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/aaa.cpp"
+  "command": "/usr/bin/c++ -Dcommon_EXPORTS -I/home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/include -g -fPIC -std=gnu++11 -o CMakeFiles/common.dir/src/aaa.cpp.o -c /home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/src/aaa.cpp",
+  "file": "/home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/src/aaa.cpp"
 },
 {
   "directory": "/home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/build",
-  "command": "/usr/bin/c++ -g -std=gnu++11 -o CMakeFiles/cmake_planning_test1.dir/bbb.cpp.o -c /home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/bbb.cpp",
-  "file": "/home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/bbb.cpp"
+  "command": "/usr/bin/c++ -I/home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/include -g -std=gnu++11 -o CMakeFiles/planning_main.dir/planning_main.cpp.o -c /home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/planning_main.cpp",
+  "file": "/home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/planning_main.cpp"
 }
 ]

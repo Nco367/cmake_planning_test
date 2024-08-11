@@ -1,4 +1,5 @@
 # ninja log v5
-0	141	1723390678918396277	CMakeFiles/cmake_planning_test1.dir/aaa.cpp.o	7102df6348d4ab7a
-0	143	1723390678918396277	CMakeFiles/cmake_planning_test1.dir/bbb.cpp.o	2efa27af7963a6de
-143	187	1723390678962396851	bin/cmake_planning_test1	fad02fd3c38bcc4b
+0	197	1723393008028014043	CMakeFiles/common.dir/src/aaa.cpp.o	7c362e35659de943
+1	206	1723393008036014044	CMakeFiles/planning_main.dir/planning_main.cpp.o	716dfa2270a547bc
+197	238	1723393008068014044	../bin/libcommon.so	2d12764165dc8063
+238	280	1723393008112014046	planning_main	4e7690c7a5e76cde

@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: cmake_planning_test1
+# Project: cmake_planning_test2
 # Configurations: Debug
 # =============================================================================
 
@@ -41,46 +41,78 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/build/
 # =============================================================================
-# Object build statements for EXECUTABLE target cmake_planning_test1
+# Object build statements for SHARED_LIBRARY target common
 
 
 #############################################
-# Order-only phony target for cmake_planning_test1
+# Order-only phony target for common
 
-build cmake_object_order_depends_target_cmake_planning_test1: phony || CMakeFiles/cmake_planning_test1.dir
+build cmake_object_order_depends_target_common: phony || CMakeFiles/common.dir
 
-build CMakeFiles/cmake_planning_test1.dir/aaa.cpp.o: CXX_COMPILER__cmake_planning_test1_Debug /home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/aaa.cpp || cmake_object_order_depends_target_cmake_planning_test1
-  DEP_FILE = CMakeFiles/cmake_planning_test1.dir/aaa.cpp.o.d
-  FLAGS = -g -std=gnu++11
-  OBJECT_DIR = CMakeFiles/cmake_planning_test1.dir
-  OBJECT_FILE_DIR = CMakeFiles/cmake_planning_test1.dir
-  TARGET_COMPILE_PDB = CMakeFiles/cmake_planning_test1.dir/
-  TARGET_PDB = bin/cmake_planning_test1.pdb
-
-build CMakeFiles/cmake_planning_test1.dir/bbb.cpp.o: CXX_COMPILER__cmake_planning_test1_Debug /home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/bbb.cpp || cmake_object_order_depends_target_cmake_planning_test1
-  DEP_FILE = CMakeFiles/cmake_planning_test1.dir/bbb.cpp.o.d
-  FLAGS = -g -std=gnu++11
-  OBJECT_DIR = CMakeFiles/cmake_planning_test1.dir
-  OBJECT_FILE_DIR = CMakeFiles/cmake_planning_test1.dir
-  TARGET_COMPILE_PDB = CMakeFiles/cmake_planning_test1.dir/
-  TARGET_PDB = bin/cmake_planning_test1.pdb
+build CMakeFiles/common.dir/src/aaa.cpp.o: CXX_COMPILER__common_Debug /home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/src/aaa.cpp || cmake_object_order_depends_target_common
+  DEFINES = -Dcommon_EXPORTS
+  DEP_FILE = CMakeFiles/common.dir/src/aaa.cpp.o.d
+  FLAGS = -g -fPIC -std=gnu++11
+  INCLUDES = -I/home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/include
+  OBJECT_DIR = CMakeFiles/common.dir
+  OBJECT_FILE_DIR = CMakeFiles/common.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/common.dir/
+  TARGET_PDB = ../bin/libcommon.pdb
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target cmake_planning_test1
+# Link build statements for SHARED_LIBRARY target common
 
 
 #############################################
-# Link the executable bin/cmake_planning_test1
+# Link the shared library ../bin/libcommon.so
 
-build bin/cmake_planning_test1: CXX_EXECUTABLE_LINKER__cmake_planning_test1_Debug CMakeFiles/cmake_planning_test1.dir/aaa.cpp.o CMakeFiles/cmake_planning_test1.dir/bbb.cpp.o
-  FLAGS = -g
-  OBJECT_DIR = CMakeFiles/cmake_planning_test1.dir
+build ../bin/libcommon.so: CXX_SHARED_LIBRARY_LINKER__common_Debug CMakeFiles/common.dir/src/aaa.cpp.o
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles/common.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/cmake_planning_test1.dir/
-  TARGET_FILE = bin/cmake_planning_test1
-  TARGET_PDB = bin/cmake_planning_test1.pdb
+  SONAME = libcommon.so
+  SONAME_FLAG = -Wl,-soname,
+  TARGET_COMPILE_PDB = CMakeFiles/common.dir/
+  TARGET_FILE = ../bin/libcommon.so
+  TARGET_PDB = ../bin/libcommon.pdb
+
+# =============================================================================
+# Object build statements for EXECUTABLE target planning_main
+
+
+#############################################
+# Order-only phony target for planning_main
+
+build cmake_object_order_depends_target_planning_main: phony || cmake_object_order_depends_target_common
+
+build CMakeFiles/planning_main.dir/planning_main.cpp.o: CXX_COMPILER__planning_main_Debug /home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/planning_main.cpp || cmake_object_order_depends_target_planning_main
+  DEP_FILE = CMakeFiles/planning_main.dir/planning_main.cpp.o.d
+  FLAGS = -g -std=gnu++11
+  INCLUDES = -I/home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/include
+  OBJECT_DIR = CMakeFiles/planning_main.dir
+  OBJECT_FILE_DIR = CMakeFiles/planning_main.dir
+  TARGET_COMPILE_PDB = CMakeFiles/planning_main.dir/
+  TARGET_PDB = planning_main.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target planning_main
+
+
+#############################################
+# Link the executable planning_main
+
+build planning_main: CXX_EXECUTABLE_LINKER__planning_main_Debug CMakeFiles/planning_main.dir/planning_main.cpp.o | ../bin/libcommon.so || ../bin/libcommon.so
+  FLAGS = -g
+  LINK_LIBRARIES = -Wl,-rpath,/home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/bin  ../bin/libcommon.so
+  OBJECT_DIR = CMakeFiles/planning_main.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/planning_main.dir/
+  TARGET_FILE = planning_main
+  TARGET_PDB = planning_main.pdb
 
 
 #############################################
@@ -109,7 +141,9 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build cmake_planning_test1: phony bin/cmake_planning_test1
+build common: phony ../bin/libcommon.so
+
+build libcommon.so: phony ../bin/libcommon.so
 
 # =============================================================================
 # Folder targets.
@@ -119,7 +153,7 @@ build cmake_planning_test1: phony bin/cmake_planning_test1
 #############################################
 # Folder: /home/nco/SLAM14jiang/D2/ch3/cmakeTestGithub/cmake_planning_test/build
 
-build all: phony bin/cmake_planning_test1
+build all: phony ../bin/libcommon.so planning_main
 
 # =============================================================================
 # Built-in targets
